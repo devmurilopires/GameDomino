@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Dominó</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+                                                      
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Jogo de Dominó</h1>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4 text-center">
+        <h4>Suas Peças</h4>
+        <div id="player-pieces" class="pieces-container"></div>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4>Mesa de Jogo</h4>
+        <div id="board" class="board"></div>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4>Peças do Computador</h4>
+        <div id="computer-pieces" class="pieces-container"></div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <div id="status"></div>
+      <div id="buttons">
+        <button id="start-button" class="btn btn-primary">Iniciar Jogo</button>
+        <button id="pass-button" class="btn btn-secondary" disabled>Passar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Parabéns -->
+  <div id="parabensModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Parabéns!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Você ganhou o jogo!</p>
+          <button id="restart-button-parabens" class="btn btn-primary">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Derrota -->
+  <div id="derrotaModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Derrota!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Você perdeu o jogo!</p>
+          <button id="restart-button-derrota" class="btn btn-primary">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Empate -->
+  <div id="empateModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Empate!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>O jogo terminou em empate!</p>
+          <button id="restart-button-empate" class="btn btn-primary">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
